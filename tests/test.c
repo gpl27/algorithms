@@ -1,0 +1,3 @@
+/*!
+ * Auxiliary functions for testing
+ */
