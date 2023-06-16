@@ -18,3 +18,4 @@ set(TEST_FILES
 
 # Create the executable for the tests
 add_executable(run_tests ${TEST_FILES} ${SOURCE_FILES})
+target_link_libraries(run_tests m)
