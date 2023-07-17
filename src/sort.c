@@ -2,6 +2,7 @@
  * Consider changing int to type defined in stdlib
  */
 #include "sort.h"
+#include "helpers.h"
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
@@ -61,14 +62,6 @@ void shell_sort(void *arr,
             shell_sort_insert(arr, arr_length, e_size, compare, j, h);
         }
     }
-}
-
-void swap(void* a, void* b, int e_size) {
-    char *tmp = malloc(e_size);
-    memcpy(tmp, a, e_size);
-    memcpy(a, b, e_size);
-    memcpy(b, tmp, e_size);
-    free(tmp);
 }
 
 void bubble_sort(void *arr,

@@ -6,7 +6,9 @@ set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -g -DDEBUG")
 
 # Add the source files
 set(SOURCE_FILES
+    src/helpers.c
     src/sort.c
+    src/heap.c
 )
 
 # Add the test files
