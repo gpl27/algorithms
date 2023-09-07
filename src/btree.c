@@ -1,4 +1,4 @@
-/* A B-Tree Implementation
+/*! A B-Tree Implementation
  *
  * NOTES
  *  Must free b->root before end of program
@@ -34,7 +34,7 @@
  *  | PTR_TYPE c[2t]      |
  *  |---------------------|
  *
- * TODO
+ * TODO:
  * Documentation
  * Implement defragmentation
  * Add memory error handling

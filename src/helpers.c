@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void swap(void* a, void* b, int e_size) {
+void swap(void* a, void* b, size_t e_size) {
     char *tmp = malloc(e_size);
     memcpy(tmp, a, e_size);
     memcpy(a, b, e_size);

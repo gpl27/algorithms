@@ -1,6 +1,8 @@
 #ifndef HELPERS_H
 #define HELPERS_H
 
-void swap(void* a, void* b, int e_size);
+#include <stdlib.h>
+
+void swap(void* a, void* b, size_t e_size);
 
 #endif

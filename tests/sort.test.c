@@ -13,6 +13,7 @@ void test_insertion_sort(void) {
     int arr_sorted[] = {0, 1, 2, 3, 4, 5};
     insertion_sort(arr, 6, sizeof(int), compare_int);
     assert(memcmp(arr, arr_sorted, 6*sizeof(int)) == 0);
+    printf("    Insertion Sort - OK!\n");
 }
 
 void test_shell_sort(void) {
@@ -21,6 +22,7 @@ void test_shell_sort(void) {
     int arr_sorted[] = {0, 1, 2, 3, 4, 5};
     shell_sort(arr, 6, sizeof(int), compare_int);
     assert(memcmp(arr, arr_sorted, 6*sizeof(int)) == 0);
+    printf("    Shell Sort - OK!\n");
 }
 
 void test_bubble_sort(void) {
@@ -29,6 +31,7 @@ void test_bubble_sort(void) {
     int arr_sorted[] = {0, 1, 2, 3, 4, 5};
     bubble_sort(arr, 6, sizeof(int), compare_int);
     assert(memcmp(arr, arr_sorted, 6*sizeof(int)) == 0);
+    printf("    Bubble Sort - OK!\n");
 }
 
 void test_comb_sort(void) {
@@ -37,6 +40,7 @@ void test_comb_sort(void) {
     int arr_sorted[] = {0, 1, 2, 3, 4, 5};
     comb_sort(arr, 6, sizeof(int), compare_int);
     assert(memcmp(arr, arr_sorted, 6*sizeof(int)) == 0);
+    printf("    Comb Sort - OK!\n");
 }
 void test_sort(void) {
 

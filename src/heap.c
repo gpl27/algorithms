@@ -1,6 +1,6 @@
 /*!
- * Mover swap para helpers.h
- * (Ver sort.c tmb)
+ * TODO:
+ *  Type generic heap
  */
 #include "heap.h"
 #include "helpers.h"
