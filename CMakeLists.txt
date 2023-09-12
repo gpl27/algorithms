@@ -16,6 +16,7 @@ set(TEST_FILES
     tests/run_tests.c
     tests/test.c
     tests/sort.test.c
+    tests/heap.test.c
 )
 
 # Create the executable for the tests

@@ -1,10 +1,13 @@
 /*!
  * TODO:
- *  Type generic heap
+ * priority queue
+ *   heap_insert
+ *   extract
+ *   top
+ *   increase_key
  */
 #include "heap.h"
 #include "helpers.h"
-
 #include <stdio.h>
 #include <math.h>
 
@@ -27,34 +30,34 @@ void print_heap(heap h) {
 }
 
 // Usar funcao de compare
-void max_heapify(heap h, int i){
+void heapify(heap h, size_t i) {
     char *arr = (char *)h.arr;
-    int largest;
-    int l = left(i);
-    int r = right(i);
+    size_t largest;
+    size_t l = left(i);
+    size_t r = right(i);
 
     if (l <= h.heap_size && 
-       *(arr + (l - 1) * h.e_size) > *(arr + (i - 1) * h.e_size)) {
+            h.cmp(arr + (l-1)*h.e_size, arr + (i-1)*h.e_size)) {
         largest = l;
     } else {
         largest = i;
     }
 
     if (r <= h.heap_size && 
-       *(arr + (r - 1) * h.e_size) > *(arr + (largest - 1) * h.e_size)) {
+            h.cmp(arr + (r-1)*h.e_size, arr + (largest-1)*h.e_size)) {
         largest = r;
     } 
 
     if (largest != i) {
-        swap(arr + (i - 1) * h.e_size, arr + (largest - 1) * h.e_size, h.e_size);
-        max_heapify(h, largest);
+        swap(arr + (i-1)*h.e_size, arr + (largest-1)*h.e_size, h.e_size);
+        heapify(h, largest);
     }
 
 }
 
-void build_max_heap(heap h, int n) {
+void build_heap(heap h, size_t n) {
     h.heap_size = n;
     for (int i = n >> 1; i > 0; i--) {
-        max_heapify(h, i);
+        heapify(h, i);
     }
 }

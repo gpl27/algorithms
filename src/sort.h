@@ -22,4 +22,10 @@ void comb_sort(void *arr,
                size_t arr_length,
                size_t e_size,
                int (*cmp)(const void*, const void*));
+
+void heap_sort(void *arr,
+               size_t arr_length,
+               size_t e_size,
+               int (*cmp)(const void*, const void*));
+
 #endif
